@@ -1,0 +1,27 @@
+#include <Stepper.h>
+
+const int stepsPerRevolution = 2048;  // Keep this at 2048 for testing
+
+// TRY EACH OF THESE (uncomment one at a time):
+myStepper(stepsPerRevolution, 8, 9, 10, 11);   // Option 1: Standard
+// Stepper myStepper(stepsPerRevolution, 8, 10, 9, 11); // Option 2: Your current
+// Stepper myStepper(stepsPerRevolution, 8, 11, 10, 9); // Option 3: Reverse pairs
+// Stepper myStepper(stepsPerRevolution, 9, 8, 11, 10); // Option 4: Shift by 1
+// Stepper myStepper(stepsPerRevolution, 9, 10, 11, 8); // Option 5: Rotate
+// Stepper myStepper(stepsPerRevolution, 11, 10, 9, 8); // Option 6: Full reverse
+
+void setup() {
+  myStepper.setSpeed(10);
+  Serial.begin(9600);
+  delay(2000);
+}
+
+void loop() {
+  Serial.println("Forward");
+  myStepper.step(2048);   // One revolution forward
+  delay(2000);
+  
+  Serial.println("Reverse");
+  myStepper.step(-2048);  // One revolution reverse
+  delay(2000);
+}
