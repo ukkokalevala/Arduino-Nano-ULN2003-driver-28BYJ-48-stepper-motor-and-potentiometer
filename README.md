@@ -1,4 +1,4 @@
-That is an excellent question, and it gets to the heart of how stepper motors actually work!
+how stepper motors actually work!
 
 The short answer is: Because a stepper motor is not a simple DC motor. It is a precise magnetic machine that needs its coils turned on and off in a very specific "dance" to spin.
 
